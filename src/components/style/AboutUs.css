@@ -1,0 +1,261 @@
+.about-us {
+  width: 100%;
+  background-color: #1b1a18;
+  padding: 110px 0 112px;
+}
+
+.about-us-container {
+  width: min(100% - 80px, 1100px);
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.about-us-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 67px;
+
+  text-align: center;
+}
+
+.about-us-eyebrow {
+  margin: 0 0 19px;
+
+  color: #bd9552;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3.2px;
+  line-height: 1.2;
+}
+
+.about-us-title {
+  margin: 0;
+
+  color: #f4f0e9;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 3.5vw, 44px);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1.15;
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.about-us-testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+}
+
+.about-us-testimonial {
+  min-width: 0;
+}
+
+.about-us-quote-mark {
+  display: block;
+
+  height: 38px;
+
+  color: #8b6c3d;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.about-us-quote {
+  min-height: 91px;
+
+  margin: 0;
+
+  color: #e4e0d9;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+.about-us-divider {
+  width: 24px;
+  height: 1px;
+
+  margin: 20px 0 17px;
+
+  background-color: #7e6339;
+}
+
+/* =========================
+   AUTHOR
+========================= */
+
+.about-us-name {
+  margin: 0 0 6px;
+
+  color: #f1eee8;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.about-us-publication {
+  margin: 0;
+
+  color: #8b8985;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* =========================
+   LARGE TABLET
+========================= */
+
+@media (max-width: 1050px) {
+  .about-us {
+    padding: 90px 0 95px;
+  }
+
+  .about-us-container {
+    width: min(100% - 60px, 900px);
+  }
+
+  .about-us-testimonials {
+    gap: 35px;
+  }
+
+  .about-us-quote {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+  .about-us {
+    padding: 80px 0 85px;
+  }
+
+  .about-us-container {
+    width: min(100% - 50px, 650px);
+  }
+
+  .about-us-header {
+    margin-bottom: 50px;
+  }
+
+  .about-us-testimonials {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-us-testimonial {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .about-us-quote {
+    min-height: auto;
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .about-us {
+    padding: 65px 0 70px;
+  }
+
+  .about-us-container {
+    width: calc(100% - 32px);
+  }
+
+  .about-us-header {
+    margin-bottom: 43px;
+  }
+
+  .about-us-eyebrow {
+    margin-bottom: 15px;
+
+    font-size: 9px;
+    letter-spacing: 2.7px;
+  }
+
+  .about-us-title {
+    font-size: clamp(34px, 9vw, 42px);
+  }
+
+  .about-us-testimonials {
+    gap: 38px;
+  }
+
+  .about-us-quote-mark {
+    height: 32px;
+    font-size: 28px;
+  }
+
+  .about-us-quote {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .about-us-divider {
+    margin: 17px 0 14px;
+  }
+
+  .about-us-name {
+    font-size: 13px;
+  }
+
+  .about-us-publication {
+    font-size: 11px;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+  .about-us {
+    padding: 55px 0 60px;
+  }
+
+  .about-us-container {
+    width: calc(100% - 28px);
+  }
+
+  .about-us-title {
+    font-size: 32px;
+  }
+
+  .about-us-testimonials {
+    gap: 34px;
+  }
+
+  .about-us-quote {
+    font-size: 12px;
+  }
+}

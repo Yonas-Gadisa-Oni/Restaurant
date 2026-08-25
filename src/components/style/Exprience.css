@@ -1,0 +1,367 @@
+.experience {
+  width: 100%;
+  background-color: #f8f6f1;
+  padding: 100px 0 105px;
+}
+
+.experience-container {
+  width: min(100% - 80px, 1160px);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(450px, 545px) minmax(0, 1fr);
+  align-items: center;
+  gap: 64px;
+}
+
+/* =================================
+   IMAGE GALLERY
+================================= */
+
+.experience-gallery {
+  width: 100%;
+  height: 400px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 16px;
+}
+
+.experience-image-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.experience-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+.experience-image-wrapper:hover .experience-image {
+  transform: scale(1.04);
+}
+
+/*
+  Create the staggered layout
+  from the screenshot.
+*/
+
+.experience-image-one {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.experience-image-two {
+  grid-column: 2;
+  grid-row: 1;
+  transform: translateY(32px);
+}
+
+.experience-image-three {
+  grid-column: 1;
+  grid-row: 2;
+
+  height: 100%;
+}
+
+.experience-image-four {
+  margin-top: -50px;
+  grid-column: 2;
+  grid-row: 2;
+  transform: translateY(80px);
+}
+
+.experience-image-two {
+  position: relative;
+  z-index: 2;
+}
+
+.experience-image-four {
+  position: relative;
+  z-index: 3;
+}
+
+/* =================================
+   CONTENT
+================================= */
+
+.experience-content {
+  width: 100%;
+  max-width: 560px;
+}
+
+.experience-eyebrow {
+  margin: 0 0 22px;
+
+  color: #bd9552;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3.2px;
+  line-height: 1.2;
+}
+
+.experience-title {
+  margin: 0;
+
+  color: #171717;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 4vw, 51px);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  line-height: 1.16;
+}
+
+.experience-title span {
+  display: block;
+}
+
+.experience-divider {
+  width: 48px;
+  height: 1px;
+
+  margin: 28px 0 31px;
+
+  background-color: #bd9552;
+}
+
+/* =================================
+   EXPERIENCE ITEMS
+================================= */
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 12px;
+}
+
+.experience-number {
+  padding-top: 1px;
+
+  color: #d7c6a7;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.experience-item-content {
+  min-width: 0;
+}
+
+.experience-item-title {
+  margin: 0 0 5px;
+
+  color: #161616;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.experience-item-description {
+  max-width: 510px;
+
+  margin: 0;
+
+  color: #777773;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* =================================
+   LARGE TABLET
+================================= */
+
+@media (max-width: 1100px) {
+  .experience {
+    padding: 85px 0 90px;
+  }
+
+  .experience-container {
+    width: min(100% - 60px, 950px);
+
+    grid-template-columns: minmax(380px, 460px) minmax(0, 1fr);
+    gap: 50px;
+  }
+
+  .experience-gallery {
+    height: 350px;
+    gap: 13px;
+  }
+
+  .experience-title {
+    font-size: 42px;
+  }
+
+  .experience-item-description {
+    font-size: 12px;
+  }
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 850px) {
+  .experience {
+    padding: 75px 0 80px;
+  }
+
+  .experience-container {
+    width: min(100% - 50px, 650px);
+
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .experience-gallery {
+    width: 100%;
+    height: 460px;
+  }
+
+  .experience-content {
+    max-width: 650px;
+  }
+
+  .experience-title {
+    font-size: clamp(42px, 7vw, 52px);
+  }
+
+  .experience-item-description {
+    max-width: 600px;
+    font-size: 14px;
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+  .experience {
+    padding: 60px 0 70px;
+  }
+
+  .experience-container {
+    width: calc(100% - 32px);
+    gap: 50px;
+  }
+
+  .experience-gallery {
+    height: 430px;
+    gap: 10px;
+  }
+
+  .experience-image-two {
+    transform: translateY(25px);
+  }
+
+  .experience-image-four {
+    transform: translateY(90px);
+  }
+
+  .experience-eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 9px;
+    letter-spacing: 2.7px;
+  }
+
+  .experience-title {
+    font-size: clamp(37px, 10vw, 48px);
+    letter-spacing: -1px;
+  }
+
+  .experience-divider {
+    width: 43px;
+    margin: 25px 0 28px;
+  }
+
+  .experience-list {
+    gap: 25px;
+  }
+
+  .experience-item {
+    grid-template-columns: 27px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .experience-number {
+    font-size: 16px;
+  }
+
+  .experience-item-title {
+    font-size: 13px;
+  }
+
+  .experience-item-description {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+/* =================================
+   SMALL PHONES
+================================= */
+
+@media (max-width: 400px) {
+  .experience {
+    padding: 50px 0 60px;
+  }
+
+  .experience-container {
+    width: calc(100% - 28px);
+    gap: 42px;
+  }
+
+  .experience-gallery {
+    height: 360px;
+    gap: 8px;
+  }
+
+  .experience-image-two {
+    transform: translateY(20px);
+  }
+
+  .experience-image-four {
+    transform: translateY(75px);
+  }
+
+  .experience-title {
+    font-size: 35px;
+  }
+
+  .experience-item-description {
+    font-size: 12px;
+  }
+
+  .experience-list {
+    gap: 22px;
+  }
+}

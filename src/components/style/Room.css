@@ -1,0 +1,366 @@
+.room {
+  width: 100%;
+  background-color: #f8f6f1;
+  padding: 82px 0 90px;
+}
+
+.room-container {
+  width: min(100% - 80px, 1150px);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 545px);
+  align-items: center;
+  gap: 65px;
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.room-content {
+  padding-top: 2px;
+}
+
+.room-establish {
+  margin: 0 0 23px;
+
+  color: #bd9552;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  line-height: 1;
+}
+
+.room-title {
+  max-width: 540px;
+  margin: 0;
+
+  color: #171616;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 4vw, 52px);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -1.8px;
+  line-height: 1.12;
+}
+
+.room-title span {
+  display: block;
+}
+
+.room-divider {
+  width: 48px;
+  height: 1px;
+
+  margin: 30px 0 32px;
+
+  background-color: #b9904e;
+}
+
+.room-description {
+  max-width: 550px;
+}
+
+.room-description p {
+  margin: 0 0 22px;
+
+  color: #73777a;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.82;
+}
+
+.room-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   STORY LINK
+========================= */
+
+.room-story-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 22px;
+
+  color: #171616;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.room-story-link:hover {
+  color: #b9904e;
+}
+
+.room-story-line {
+  width: 32px;
+  height: 1px;
+
+  background-color: #272727;
+
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.room-story-link:hover .room-story-line {
+  width: 42px;
+  background-color: #b9904e;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.room-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 480px;
+}
+
+.room-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  filter: saturate(0.9);
+}
+
+/* =========================
+   YEARS BADGE
+========================= */
+
+.room-years {
+  position: absolute;
+  left: -24px;
+  bottom: -23px;
+
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #bd9858;
+
+  color: #ffffff;
+}
+
+.room-years-number {
+  margin-bottom: 3px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 31px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.room-years-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 1;
+}
+
+/* =========================
+   LARGE TABLETS
+========================= */
+
+@media (max-width: 1100px) {
+  .room {
+    padding: 75px 0 85px;
+  }
+
+  .room-container {
+    width: min(100% - 60px, 1000px);
+
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 480px);
+    gap: 50px;
+  }
+
+  .room-title {
+    font-size: 43px;
+  }
+
+  .room-description p {
+    font-size: 14px;
+  }
+
+  .room-image-wrapper {
+    height: 430px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+  .room {
+    padding: 70px 0 80px;
+  }
+
+  .room-container {
+    width: min(100% - 50px, 650px);
+
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .room-content {
+    max-width: 600px;
+  }
+
+  .room-title {
+    max-width: 600px;
+    font-size: clamp(42px, 7vw, 55px);
+  }
+
+  .room-description {
+    max-width: 600px;
+  }
+
+  .room-description p {
+    font-size: 15px;
+  }
+
+  .room-image-wrapper {
+    width: 100%;
+    height: 500px;
+  }
+
+  .room-years {
+    left: -18px;
+    bottom: -18px;
+
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .room {
+    padding: 60px 0 70px;
+  }
+
+  .room-container {
+    width: calc(100% - 32px);
+    gap: 45px;
+  }
+
+  .room-establish {
+    margin-bottom: 20px;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .room-title {
+    font-size: clamp(37px, 11vw, 48px);
+    letter-spacing: -1px;
+    line-height: 1.08;
+  }
+
+  .room-divider {
+    width: 43px;
+    margin: 25px 0 27px;
+  }
+
+  .room-description p {
+    margin-bottom: 19px;
+
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .room-story-link {
+    margin-top: 18px;
+  }
+
+  .room-image-wrapper {
+    height: 400px;
+  }
+
+  .room-years {
+    left: -8px;
+    bottom: -12px;
+
+    width: 100px;
+    height: 100px;
+  }
+
+  .room-years-number {
+    font-size: 28px;
+  }
+
+  .room-years-text {
+    font-size: 10px;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+  .room {
+    padding: 50px 0 60px;
+  }
+
+  .room-container {
+    width: calc(100% - 28px);
+    gap: 40px;
+  }
+
+  .room-title {
+    font-size: 35px;
+  }
+
+  .room-description p {
+    font-size: 13px;
+  }
+
+  .room-image-wrapper {
+    height: 340px;
+  }
+
+  .room-years {
+    width: 88px;
+    height: 88px;
+  }
+
+  .room-years-number {
+    font-size: 25px;
+  }
+
+  .room-years-text {
+    font-size: 9px;
+  }
+}
