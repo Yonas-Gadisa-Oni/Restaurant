@@ -23,22 +23,22 @@ const experienceItems = [
 
 const experienceImages = [
   {
-    src: "/images/exp1.avif",
+    src: "/Restaurant/images/exp1.avif",
     alt: "Elegant restaurant dish",
     className: "experience-image-one",
   },
   {
-    src: "/images/exp2.avif",
+    src: "/Restaurant/images/exp2.avif",
     alt: "Fresh pasta with truffle",
     className: "experience-image-two",
   },
   {
-    src: "/images/exp3.avif",
+    src: "/Restaurant/images/exp3.avif",
     alt: "Seafood restaurant dish",
     className: "experience-image-three",
   },
   {
-    src: "/images/exp4.avif",
+    src: "/Restaurant/images/exp4.avif",
     alt: "Chocolate dessert",
     className: "experience-image-four",
   },

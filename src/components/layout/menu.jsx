@@ -8,7 +8,7 @@ const menuItems = [
     description:
       "Velvety black truffle velouté, aged parmesan foam, chive oil",
     category: "SIGNATURE",
-    image: "/images/menu/Truffle.avif",
+    image: "/Restaurant/images/menu/Truffle.avif",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const menuItems = [
     description:
       "Herb-crusted lamb rack, rosemary jus, haricots verts, Dauphinois",
     category: "CHEF'S CHOICE",
-    image: "/images/menu/Agneau.avif",
+    image: "/Restaurant/images/menu/Agneau.avif",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const menuItems = [
     description:
       "Warm valrhona chocolate tart, tonka bean ice cream, cocoa tuile",
     category: "DESSERT",
-    image: "/images/menu/Chocolat.avif",
+    image: "/Restaurant/images/menu/Chocolat.avif",
   },
 ];
 

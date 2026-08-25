@@ -4,7 +4,7 @@ function Chef() {
   return (
     <section className="chef" id="chef">
       <div className="chef-overlay">
-        <img src="/images/chef.avif" alt="" />
+        <img src="/Restaurant/images/chef.avif" alt="" />
       </div>
 
       <div className="chef-content">
