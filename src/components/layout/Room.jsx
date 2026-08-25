@@ -42,7 +42,7 @@ function Room() {
         {/* Right Image */}
         <div className="room-image-wrapper">
           <img
-            src="/public/images/room.avif"
+            src="/images/room.avif"
             alt="Elegant interior of Maison Élian restaurant"
             className="room-image"
           />

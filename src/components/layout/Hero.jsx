@@ -4,7 +4,7 @@ function Hero() {
   return (
     <main className="hero">
       <div className="hero-overlay">
-        <img src="/public/images/hero.avif" alt="" />
+        <img src="/images/hero.avif" alt="" />
       </div>
 
       <div className="hero-content">
