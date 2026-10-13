@@ -1,0 +1,56 @@
+.notfound {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #1b1a18;
+	text-align: center;
+	padding: 40px 24px;
+}
+
+.notfound-content {
+	max-width: 480px;
+}
+
+.notfound-eyebrow {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	letter-spacing: 3px;
+	color: #c7a15d;
+	margin: 0 0 16px;
+}
+
+.notfound-title {
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	font-size: 120px;
+	font-weight: 400;
+	color: #f5f1eb;
+	margin: 0 0 16px;
+	line-height: 1;
+}
+
+.notfound-description {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: rgba(228, 224, 217, 0.6);
+	margin: 0 0 40px;
+	line-height: 1.7;
+}
+
+.notfound-button {
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	letter-spacing: 1.5px;
+	color: #fff;
+	background: #c7a15d;
+	text-decoration: none;
+	padding: 14px 36px;
+	border-radius: 2px;
+	transition: background 0.3s;
+}
+.notfound-button:hover {
+	background: #b8923f;
+}
+

@@ -1,53 +1,95 @@
+import { useState, useEffect } from "react";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import "../style/Navbar.css";
 
 const navLinks = [
-  { label: "HOME", href: "#" },
-  { label: "MENU", href: "#menu" },
-  { label: "ABOUT", href: "#about" },
-  { label: "GALLERY", href: "#gallery" },
-  { label: "CONTACT", href: "#contact" },
+	{ label: "HOME", to: "/" },
+	{ label: "MENU", to: "/menu" },
+	{ label: "ABOUT", to: "/about" },
+	{ label: "GALLERY", to: "/gallery" },
+	{ label: "CONTACT", to: "/contact" },
 ];
 
 function Navbar() {
-  return (
-    <header className="navbar">
-      <div className="navbar-container">
-        <a href="#" className="navbar-logo">
-          Maison Élian
-        </a>
+	const [menuOpen, setMenuOpen] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
+	const location = useLocation();
 
-        <nav className="navbar-menu" aria-label="Main navigation">
-          <div className="navbar-links">
-            {navLinks.map((link, index) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className={`navbar-link ${
-                  index === 0 ? "navbar-link-active" : ""
-                }`}
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+	// Close mobile menu on route change
+	useEffect(() => {
+		setMenuOpen(false);
+	}, [location.pathname]);
 
-          <a href="#reservation" className="navbar-reserve">
-            RESERVE
-          </a>
-        </nav>
+	// Add scrolled class for background
+	useEffect(() => {
+		const handleScroll = () => {
+			setScrolled(window.scrollY > 60);
+		};
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
-        <button
-          className="navbar-toggle"
-          type="button"
-          aria-label="Open navigation menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
-  );
+	// Prevent body scroll when mobile menu is open
+	useEffect(() => {
+		if (menuOpen) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "";
+		}
+		return () => {
+			document.body.style.overflow = "";
+		};
+	}, [menuOpen]);
+
+	return (
+		<header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+			<div className="navbar-container">
+				<Link to="/" className="navbar-logo">
+					Maison Élian
+				</Link>
+
+				<nav
+					className={`navbar-menu ${menuOpen ? "navbar-menu-open" : ""}`}
+					aria-label="Main navigation"
+				>
+					<div className="navbar-links">
+						{navLinks.map((link) => (
+							<NavLink
+								key={link.label}
+								to={link.to}
+								className={({ isActive }) =>
+									`navbar-link ${isActive ? "navbar-link-active" : ""}`
+								}
+								end={link.to === "/"}
+							>
+								{link.label}
+							</NavLink>
+						))}
+					</div>
+					<Link to="/reserve" className="navbar-reserve">
+						RESERVE
+					</Link>
+				</nav>
+
+				<button
+					className={`navbar-toggle ${menuOpen ? "navbar-toggle-open" : ""}`}
+					type="button"
+					aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+					onClick={() => setMenuOpen((prev) => !prev)}
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+
+			{/* Mobile overlay */}
+			<div
+				className={`navbar-overlay ${menuOpen ? "navbar-overlay-open" : ""}`}
+				onClick={() => setMenuOpen(false)}
+			/>
+		</header>
+	);
 }
 
 export default Navbar;

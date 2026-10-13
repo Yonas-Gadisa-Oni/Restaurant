@@ -6,6 +6,64 @@ body,
 	margin: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	overflow-x: hidden;
+}
+
+/* Global focus styles for accessibility */
+*:focus-visible {
+	outline: 2px solid #c7a15d;
+	outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+a,
+button,
+input,
+select,
+textarea {
+	transition: outline 0.2s;
+}
+
+/* Back to top button */
+.back-to-top {
+	position: fixed;
+	bottom: 32px;
+	right: 32px;
+	width: 44px;
+	height: 44px;
+	background: rgba(27, 26, 24, 0.85);
+	border: 1px solid rgba(199, 161, 93, 0.3);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 90;
+	opacity: 0;
+	transform: translateY(12px);
+	pointer-events: none;
+	transition: opacity 0.35s, transform 0.35s, background 0.3s, border-color 0.3s;
+}
+.back-to-top-visible {
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+.back-to-top:hover {
+	background: #c7a15d;
+	border-color: #c7a15d;
+}
+.back-to-top svg {
+	width: 18px;
+	height: 18px;
+	stroke: #f5f1eb;
+	fill: none;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
 }

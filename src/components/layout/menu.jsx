@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../style/menu.css";
 
 const menuItems = [
@@ -77,9 +78,9 @@ function Menu() {
         </div>
 
         <div className="menu-action">
-          <a href="#full-menu" className="menu-button">
+          <Link to="/menu" className="menu-button">
             VIEW FULL MENU
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,0 +1,127 @@
+/* ===== JOIN US / NEWSLETTER ===== */
+.joinus {
+	background: linear-gradient(180deg, #1b1a18 0%, #252320 100%);
+	padding: 100px 0 105px;
+	text-align: center;
+}
+
+.joinus-container {
+	max-width: 640px;
+	margin: 0 auto;
+	padding: 0 32px;
+}
+
+.joinus-eyebrow {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	letter-spacing: 3.5px;
+	color: #c7a15d;
+	margin: 0 0 18px;
+	text-transform: uppercase;
+}
+
+.joinus-title {
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	font-size: 40px;
+	font-weight: 400;
+	color: #f5f1eb;
+	line-height: 1.15;
+	margin: 0 0 18px;
+}
+
+.joinus-description {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 1.75;
+	color: rgba(228, 224, 217, 0.72);
+	margin: 0 0 36px;
+}
+
+/* ===== FORM ===== */
+.joinus-form {
+	position: relative;
+}
+
+.joinus-input-wrapper {
+	display: flex;
+	gap: 0;
+	border: 1px solid rgba(199, 161, 93, 0.35);
+	border-radius: 3px;
+	overflow: hidden;
+	transition: border-color 0.3s;
+}
+.joinus-input-wrapper:focus-within {
+	border-color: #c7a15d;
+}
+
+.joinus-input {
+	flex: 1;
+	background: rgba(255, 255, 255, 0.04);
+	border: none;
+	padding: 16px 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #f5f1eb;
+	outline: none;
+}
+.joinus-input::placeholder {
+	color: rgba(245, 241, 235, 0.4);
+}
+
+.joinus-button {
+	background: #c7a15d;
+	color: #fff;
+	border: none;
+	padding: 16px 32px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	letter-spacing: 1.5px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.3s;
+	white-space: nowrap;
+}
+.joinus-button:hover {
+	background: #b8923f;
+}
+
+/* ===== SUCCESS MESSAGE ===== */
+.joinus-success-message {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #c7a15d;
+	margin: 14px 0 0;
+	opacity: 0;
+	transform: translateY(6px);
+	transition: opacity 0.4s, transform 0.4s;
+}
+.joinus-form-success .joinus-success-message {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.joinus-note {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: rgba(245, 241, 235, 0.3);
+	margin: 20px 0 0;
+	letter-spacing: 0.5px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+	.joinus {
+		padding: 70px 0 75px;
+	}
+	.joinus-title {
+		font-size: 30px;
+	}
+	.joinus-input-wrapper {
+		flex-direction: column;
+	}
+	.joinus-button {
+		padding: 14px 32px;
+	}
+}
+

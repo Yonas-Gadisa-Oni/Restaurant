@@ -1,0 +1,266 @@
+.reserve-page {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hero Banner */
+.reserve-page-hero {
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("/Restaurant/images/room.avif") center/cover no-repeat;
+  text-align: center;
+}
+
+.reserve-page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.reserve-page-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #f5f1eb;
+}
+
+.reserve-page-hero-eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #c7a15d;
+  margin-bottom: 10px;
+}
+
+.reserve-page-hero-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* Main Content */
+.reserve-page-content {
+  background-color: #f8f6f1;
+  padding: 80px 40px;
+  color: #171616;
+}
+
+.reserve-page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* Form */
+.reserve-page-form-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #1b1a18;
+}
+
+.reserve-page-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  color: #73777a;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid #d1cdb8;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #171616;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #c7a15d;
+}
+
+.reserve-page-submit {
+  background-color: #c7a15d;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.reserve-page-submit:hover {
+  background-color: #bd9552;
+}
+
+/* Info Cards */
+.reserve-page-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-card {
+  background-color: #fff;
+  padding: 25px;
+  border-left: 4px solid #c7a15d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #171616;
+}
+
+.info-card p {
+  color: #73777a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Footer Bar */
+.reserve-page-footer-bar {
+  background-color: #1b1a18;
+  padding: 60px 40px;
+  color: #f5f1eb;
+}
+
+.footer-bar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.footer-bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-bar-item .icon {
+  font-size: 24px;
+  color: #c7a15d;
+}
+
+.footer-bar-item p {
+  margin: 0;
+  color: #e4e0d9;
+}
+
+/* Modal */
+.reserve-page-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.reserve-page-modal {
+  background-color: #f8f6f1;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  border-top: 5px solid #c7a15d;
+}
+
+.reserve-page-modal h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #1b1a18;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.reserve-page-modal p {
+  color: #73777a;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.reserve-page-modal-close {
+  background-color: #1b1a18;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.reserve-page-modal-close:hover {
+  background-color: #171616;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .reserve-page-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-bar-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+}

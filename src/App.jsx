@@ -1,28 +1,28 @@
-import Navbar from "./components/layout/Navbar";
-import Hero from "./components/layout/Hero";
-import Room from "./components/layout/Room";
-import Menu from "./components/layout/menu";
-import Chef from "./components/layout/chef";
-import Exprience from "./components/layout/Exprience";
-import AboutUs from "./components/layout/AboutUs";
-import Gallery from "./components/layout/Gallay";
-import Joinus from "./components/layout/Joinus";
-import Footer from "./components/layout/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import HomePage from "./components/layout/HomePage";
+import MenuPage from "./components/pages/Menu/layout/Menu";
+import AboutPage from "./components/pages/About/About";
+import GalleryPage from "./components/pages/Gallery/Gallery";
+import ContactPage from "./components/pages/Contact/Contact";
+import ReservePage from "./components/pages/Reserve/Reserve";
+import NotFound from "./components/pages/NotFound";
 
 function App() {
 	return (
-		<>
-			<Navbar />
-			<Hero />
-            <Room />
-            <Menu />
-            <Chef />
-            <Exprience />
-			<AboutUs />
-			<Gallery />
-			<Joinus />			
-			<Footer />
-		</>
+		<BrowserRouter basename="/Restaurant">
+			<Routes>
+				<Route element={<Layout />}>
+					<Route index element={<HomePage />} />
+					<Route path="menu" element={<MenuPage />} />
+					<Route path="about" element={<AboutPage />} />
+					<Route path="gallery" element={<GalleryPage />} />
+					<Route path="contact" element={<ContactPage />} />
+					<Route path="reserve" element={<ReservePage />} />
+					<Route path="*" element={<NotFound />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
